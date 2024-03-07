@@ -1,0 +1,43 @@
+{
+	"name": "with-webpack",
+	"private": true,
+	"version": "0.0.0",
+	"scripts": {
+		"clean": "rimraf dist",
+		"build:js": "webpack --mode=production",
+		"build": "npm run clean && npm run build:js",
+		"dev": "webpack serve --mode=development",
+		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+	},
+	"dependencies": {
+		"@versini/ui-plugins": "1.1.1",
+		"react": "18.2.0",
+		"react-dom": "18.2.0"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "7.1.1",
+		"@typescript-eslint/parser": "7.1.1",
+		"@vitejs/plugin-react": "4.2.1",
+		"autoprefixer": "10.4.18",
+		"css-loader": "6.10.0",
+		"eslint-config-prettier": "8.5.0",
+		"eslint-plugin-react-hooks": "4.6.0",
+		"eslint-plugin-react-refresh": "0.4.5",
+		"eslint-plugin-react": "7.29.4",
+		"eslint": "8.57.0",
+		"html-webpack-plugin": "5.6.0",
+		"mini-css-extract-plugin": "2.8.1",
+		"postcss-loader": "8.1.1",
+		"postcss": "8.4.35",
+		"prettier": "2.6.2",
+		"rimraf": "3.0.2",
+		"style-loader": "3.3.4",
+		"ts-loader": "9.5.1",
+		"tslib": "2.4.0",
+		"typescript": "5.4.2",
+		"webpack-cli": "5.1.4",
+		"webpack-config-utils": "2.3.1",
+		"webpack-dev-server": "5.0.2",
+		"webpack": "5.90.3"
+	}
+}
