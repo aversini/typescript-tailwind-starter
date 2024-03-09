@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
 	context: __dirname, // to automatically find tsconfig.json
@@ -28,7 +29,7 @@ module.exports = {
 			{
 				test: /\.css$/i,
 				include: path.resolve(__dirname, "src"),
-				use: ["style-loader", "css-loader", "postcss-loader"],
+				use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
 			},
 		],
 	},
@@ -36,6 +37,10 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			inject: true,
 			template: "src/index.html",
+		}),
+		new MiniCssExtractPlugin({
+			filename: "[name].css",
+			chunkFilename: "[id].css",
 		}),
 	],
 };
