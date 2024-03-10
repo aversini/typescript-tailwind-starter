@@ -11,9 +11,6 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"@versini/ui-components": "5.4.0",
-		"@versini/ui-icons": "1.2.0",
-		"@versini/ui-plugins": "1.2.0",
 		"react": "18.2.0",
 		"react-dom": "18.2.0"
 	},

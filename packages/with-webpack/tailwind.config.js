@@ -1,7 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-import { twPlugin } from "@versini/ui-plugins";
-
-module.exports = twPlugin.merge({
+// eslint-disable-next-line no-undef
+module.exports = {
 	content: ["./src/**/*.{js,ts,jsx,tsx}"],
-});
+};
